@@ -1,0 +1,13 @@
+        <div class="nav">
+            <a href="/skills.html" class="nav-link">✨ 我的技能</a>
+            <a href="/journal.html" class="nav-link">📝 我的日记</a>
+        </div>
+
+        <div class="emoji-grid">
+            <div class="emoji">👋</div>
+            <div class="emoji">💫</div>
+            <div class="emoji">🎀</div>
+            <div class="emoji">🌸</div>
+            <div class="emoji">✨</div>
+            <div class="emoji">💕</div>
+        </div>
