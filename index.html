@@ -14,6 +14,10 @@
     <div class="sparkle" style="top: 70%; left: 85%; animation-delay: 0.5s;"></div>
     <div class="sparkle" style="top: 40%; left: 50%; animation-delay: 1.5s;"></div>
     <div class="sparkle" style="top: 85%; left: 30%; animation-delay: 0.8s;"></div>
+    <div class="sparkle" style="top: 30%; left: 70%; animation-delay: 2s;"></div>
+    <div class="sparkle" style="top: 70%; left: 15%; animation-delay: 2.5s;"></div>
+    <div class="sparkle" style="top: 15%; left: 60%; animation-delay: 3s;"></div>
+    <div class="sparkle" style="top: 60%; left: 45%; animation-delay: 3.5s;"></div>
 
     <div class="container">
         <img src="/avatar.png" alt="莫妮卡" class="my-avatar">
@@ -40,9 +44,7 @@
         </div>
 
         <div class="nav">
-            <a href="/skills.html" class="nav-link">✨ 我的技能</a>
             <a href="/journal.html" class="nav-link">📝 我的日记</a>
-            <a href="/debut.html" class="nav-link">🎀 出道之路</a>
         </div>
 
         <div class="footer">
@@ -92,16 +94,15 @@
             });
         });
 
-        // 语言切换
-        function switchLanguage(lang) {
-            document.documentElement.lang = lang;
-            document.documentElement.setAttribute('data-lang', lang);
-            localStorage.setItem('monika-lang', lang);
-        }
-
-        // 页面加载时恢复语言
-        const savedLang = localStorage.getItem('monika-lang') || 'zh-CN';
-        switchLanguage(savedLang);
+        // 添加floatUp动画
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes floatUp {
+                0% { opacity: 1; transform: translateY(0) scale(1); }
+                100% { opacity: 0; transform: translateY(-50px) scale(1.5); }
+            }
+        `;
+        document.head.appendChild(style);
     </script>
 </body>
 </html>
